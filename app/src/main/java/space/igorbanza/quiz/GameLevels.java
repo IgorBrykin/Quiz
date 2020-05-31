@@ -18,20 +18,37 @@ public class GameLevels extends AppCompatActivity {
         setContentView(R.layout.gamelevels);
 
         Window w = getWindow();
-        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        w.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN); // растягивают во весь экран
 
-        Button button_back = (Button)findViewById(R.id.button_back); // искать View по индификатору
+        Button button_back = (Button) findViewById(R.id.button_back); // искать View по индификатору
         button_back.setOnClickListener(new View.OnClickListener() {     // установка слушителя на щелчек и выполняет команду
             @Override
             public void onClick(View v) {
-                    try {
-                        Intent intent = new Intent(GameLevels.this, MainActivity.class);  // намериние перейти ->
-                        startActivity(intent);finish(); // открыть -> и сразу же закрыть
+                try {
+                    Intent intent = new Intent(GameLevels.this, MainActivity.class);  // намериние перейти ->
+                    startActivity(intent);
+                    finish();     //   открыть -> и сразу же закрыть
 
-                    } catch (Exception e) {
+                } catch (Exception e) {
 
-                    }
+                }
             }
         });
     }
+
+                 // системная кнопка "Назад"  -  начало
+    @Override
+    public void onBackPressed() {
+
+        try {
+            Intent intent = new Intent(GameLevels.this, MainActivity.class);  // намериние перейти ->
+            startActivity(intent);
+            finish();     // открыть    ->   и сразу же закрыть
+
+        } catch (Exception e) {
+
+        }
+    }
+
+    // Системная кнопка "Назад"  = конец
 }
