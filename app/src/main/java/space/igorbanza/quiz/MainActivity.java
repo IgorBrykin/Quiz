@@ -12,7 +12,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    private long backPressedTime;   // создали переменную
+    private long backPressedTime;     // создали переменную
     private Toast backToast;
 
     @Override
