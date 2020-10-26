@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 try {
+
                     Intent intent = new Intent(MainActivity.this, GameLevels.class);
                     startActivity(intent);
                     finish();
