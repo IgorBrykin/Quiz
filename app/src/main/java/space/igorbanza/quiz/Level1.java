@@ -13,9 +13,9 @@ public class Level1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.universal);
 
-        // Развернуть игру на весь экран - начало
+        // Развернуть игру на весь экран -  начало
 
-        Window w = getWindow();
+        Window w = getWindow();     //
         w.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         // Раэвернуть игру на весь экран - конец
